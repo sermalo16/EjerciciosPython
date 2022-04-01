@@ -1,3 +1,6 @@
+from re import I
+
+
 f=open("ejemplo.txt", "r+")
 #x=250
 #f.write(str(x)) Escritura en el archivo
@@ -20,8 +23,16 @@ f=open("ejemplo.txt", "r+")
 #l.insert(0,15)#inseta un elemento en la posicionindicada
 #l= l[3:]+ l[:3]
 
-AlfabetoMin =  ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n']
-Alfabetomin2 = ['ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '-']
+#AlfabetoMin =  ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n']
+#Alfabetomin2 = ['ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '-']
 
-Alfabetomin2=Alfabetomin2[-6:] + Alfabetomin2[:-6]
-print(AlfabetoMin, "\n", Alfabetomin2)
+#Alfabetomin2=Alfabetomin2[-6:] + Alfabetomin2[:-6]
+#print(AlfabetoMin, "\n", Alfabetomin2)
+
+texto = ["hola","mundo"]
+
+texto2= "koala"
+for a in range(len(texto)):
+    for b in range(len(texto[a])):
+        print(texto[a][b])
+print(e)

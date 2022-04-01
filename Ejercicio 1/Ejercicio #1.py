@@ -1,10 +1,10 @@
 import maniArchivos
 
 
-texto = str(input("ingrese la ruta del archivo: "))
 
-def funcionEnpriptacion(texto):
-    f = open(texto, "r+")
+
+def funcionEnpriptacion():
+    
     AlfabetoMin = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
                    'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     AlfabetoMayus = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
@@ -18,19 +18,27 @@ def funcionEnpriptacion(texto):
     print("2. Agregar Texto al archivo")
     print("3. Encriptar archivo")
     print("4. Desencriptar Acrchivo")
-    print("Presione cualquier tecla para salir")
+    print("Presione cualquier tecla para salir\n")
     opcion = int(input("Ingrese una opcion: "))
 
     if opcion == 1:
+        texto = str(input("ingrese la ruta del archivo a encriptar: "))
+        f = open(texto, "r+")
         print(" \nEl contenido del archivo es: \n")
         contenido = f.read()
         print(contenido, "\n")
+        f.close()
     elif opcion == 2:
+        texto = str(input("ingrese la ruta del archivo a encriptar: "))
+        f = open(texto, "r+")
         linea = input("\nIntroduce el texto que deseas agregar: ")
         maniArchivos.escribirArchivo(linea, texto)
         contenido = f.read()
         print(contenido, "\n")
+        f.close()
     elif opcion == 3:
+        texto = str(input("ingrese la ruta del archivo a encriptar: "))
+        f = open(texto, "r+")
         for linea in f:#accedo a cada linea
             for palabra in  linea.split():#accedo a las palabras
                 for i in range(len(palabra)):#Accedo a cada letra
@@ -64,11 +72,14 @@ def funcionEnpriptacion(texto):
         t = open("encriptadoEj1.txt", "w")
 
         t.write(encriptado)
-        # print(AlfabetoMayus[26])
         print("\n",encriptado,"\n")
-    elif opcion==4:
+        f.close()
+        t.close()
 
-        t=open("encriptadoEj1.txt", "r+")
+    elif opcion==4:
+        texto = str(input("ingrese la ruta del archivo a desncriptar: "))
+        
+        t=open(texto, "r+")
     
         for linea in t:#accedo a cada linea
             for palabra in  linea.split():#accedo a las palabras
@@ -106,12 +117,12 @@ def funcionEnpriptacion(texto):
 
     
     else:
-        print("\n")
+        print("Adios!!")
         None
 
 i=0
-while i<=0:
-    funcionEnpriptacion(texto)
+while i==0:
+    funcionEnpriptacion()
     print("0. Volver a ejecutar")
-    print("1. salir")
+    print("Ingrese un numero mayor a cero para salir")
     i=int(input("ingrese la opcion: "))

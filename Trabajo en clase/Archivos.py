@@ -15,9 +15,13 @@ f=open("ejemplo.txt", "r+")
 #    for palabra in linea.split():
 #        print(palabra)
 
-l = [1,2,3,4,5,6,7,8,9,10]
+#l = [1, 4, 6, 7 , 2]
 #l.pop()#elimina el ultimo elemento o el elmento que indiquemos
 #l.insert(0,15)#inseta un elemento en la posicionindicada
-for i in range(0,4):
-    l.insert(-2,l.pop())#rotacion de la lista
-print(l)
+#l= l[3:]+ l[:3]
+
+AlfabetoMin =  ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n']
+Alfabetomin2 = ['ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '-']
+
+Alfabetomin2=Alfabetomin2[-6:] + Alfabetomin2[:-6]
+print(AlfabetoMin, "\n", Alfabetomin2)

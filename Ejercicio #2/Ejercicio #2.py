@@ -145,7 +145,11 @@ def funcionEnpriptacion():
             for b in range(len(cadena[a])):
                 desencriptado = desencriptado + cadena[a][b]
             desencriptado=desencriptado+" "
-        print(desencriptado)
+        t=open("desencriptado.txt", "w")
+        t.write(desencriptado)
+        print("\nTexto Encriptado: ", linea)
+        print("texto desenciptado: ",desencriptado, "\n")
+        t.close()
     else:
         print("Adios!!")
         None

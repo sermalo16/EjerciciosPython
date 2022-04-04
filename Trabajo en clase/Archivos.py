@@ -29,10 +29,15 @@ f=open("ejemplo.txt", "r+")
 #Alfabetomin2=Alfabetomin2[-6:] + Alfabetomin2[:-6]
 #print(AlfabetoMin, "\n", Alfabetomin2)
 
-texto = ["hola","mundo"]
-
+texto = ["hoola","mundooo"]
+dic={1:"hooools"}
+num=[1,2,3,4,5]
 texto2= "koala"
+#for a in range(len(texto)):
+ #   print(texto[a])
+  #  for b in range(len(texto[a])):
+   #     print(texto[a][b])
+b=0
+
 for a in range(len(texto)):
-    for b in range(len(texto[a])):
-        print(texto[a][b])
-print(e)
+    print(texto[a].count("o"))
